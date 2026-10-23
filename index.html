@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f4ec">
+    <title>study for cat</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="study for cat (home page)">
+          <span class="brand-mark" aria-hidden="true">✿</span>
+          <span>jellycakemorfor</span>
+        </a>
+        <button
+          class="session-label history-button"
+          id="history-button"
+          type="button"
+          aria-haspopup="dialog"
+          aria-controls="history-dialog"
+          aria-label="View reading history"
+        >
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>History ഒ·˚</span>
+        </button>
+      </header>
+
+      <section class="timer-card" aria-labelledby="page-title">
+        <div class="card-heading">
+          <p class="eyebrow">for Copter ⋆🐾°</p>
+          <h1 id="page-title">Raise your cat!</h1>
+          <p class="subtitle">goal - 40 min</p>
+        </div>
+
+        <div class="plant-scene">
+          <img id="stage-icon" class="stage-icon is-pixel-art" src="unnamed.gif" alt="ต้นกล้า">
+          <span id="stage-label" class="stage-label">stage 1 : Cat cells</span>
+        </div>
+
+        <div class="timer-display" id="timer-display" role="timer" aria-label="เวลาที่เรียนไปแล้ว">
+          00:00:00
+        </div>
+        <p class="timer-caption">studied time</p>
+
+        <div class="progress-section">
+          <div class="progress-copy">
+            <span id="milestone-copy">Next growth stage in 20 min.</span>
+            <span id="progress-percent">0%</span>
+          </div>
+          <div
+            class="progress-track"
+            id="progress-track"
+            role="progressbar"
+            aria-label="Making progress towards your reading goal"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+          >
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="button button-primary" id="toggle-button" type="button">
+            <span id="toggle-icon" aria-hidden="true">▶</span>
+            <span id="toggle-text">Start</span>
+          </button>
+          <button class="button button-secondary" id="reset-button" type="button">
+            <span aria-hidden="true">↻</span>
+            <span>Reset</span>
+          </button>
+        </div>
+
+      </section>
+
+      <dialog class="history-dialog" id="history-dialog" aria-labelledby="history-title">
+        <div class="history-heading">
+          <div>
+            <h2 id="history-title">History ഒ·˚</h2>
+            <p>Each session will be saved when you click "Reset"</p>
+          </div>
+          <button class="history-close" id="history-close" type="button" aria-label="Close history">
+            ×
+          </button>
+        </div>
+        <p class="history-storage-message" id="history-storage-message" role="status" hidden></p>
+        <p class="history-empty" id="history-empty">No history available. Try reading a full session!</p>
+        <ol class="history-list" id="history-list" aria-label="Reading session list"></ol>
+        <div class="history-actions">
+          <button class="history-clear" id="history-clear" type="button">Clear history</button>
+        </div>
+      </dialog>
+
+      <footer class="footer-note">
+        <span aria-hidden="true">♡</span>
+        <span>fighting my piggy!</span>
+      </footer>
+    </main>
+  </body>
+</html>
